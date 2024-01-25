@@ -1,5 +1,36 @@
-body {
-  font-family: Arial, sans-serif;
+html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: grid;
+  grid-template-rows: 1fr .75fr 6fr 1fr;
+  grid-template-areas:
+    "header header header"
+    "nav nav nav"
+    "main main main"
+    "footer footer footer";
+}
+
+header {
+  grid-area: header; /* Removed quotes around header */
+  background-color: black;
+}
+
+nav {
+  grid-area: nav; /* Removed quotes around nav */
+  background-color: lightblue;
+}
+
+main {
+  grid-area: main; /* Removed quotes around main */
+  background-color: lightcoral;
+}
+
+footer {
+  grid-area: footer; /* Removed quotes around footer */
+  background-color: greenyellow;
 }
