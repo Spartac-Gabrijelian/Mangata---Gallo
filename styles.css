@@ -8,6 +8,11 @@ html {
   padding: 6px;
 }
 
+a {
+  color: black;
+  text-decoration-line: none;
+}
+
 body {
   font-family: Arial, sans-serif;
   display: grid;
@@ -89,8 +94,7 @@ main {
   position: relative; 
   z-index: 1; 
   color: white; 
-  padding-top: 40px;
-  padding-left: 40px;
+  padding: 20px;
   font-family: 'IBM Plex Serif', serif;
   text-align: left;
 }
@@ -137,4 +141,64 @@ footer {
   grid-area: footer;
   background-color: black;
   border: white solid 2px;
+}
+
+@media (max-width: 700px) {
+  body {
+    font-size: 14px; /* Adjust the base font size for smaller screens */
+  }
+
+  .main-container {
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+
+  .container-nav button {
+    font-size: 0.3em;
+  }
+
+  #logo {
+    height: 80px;
+  }
+
+}
+
+@media (max-width: 376px) {
+  body {
+    font-size: 12px; /* Adjust the base font size for smaller screens */
+  }
+
+  .main-container {
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+
+  .container-nav button {
+    font-size: 0.30em;
+  }
+
+  #logo {
+    height: 60px;
+  }
+
+}
+
+@media (max-width: 300px) {
+  body {
+    font-size: 9px; /* Adjust the base font size for smaller screens */
+  }
+
+  .main-container {
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+
+  .container-nav button {
+    font-size: 0.25em;
+  }
+
+  #logo {
+    height: 50px;
+  }
+
 }
