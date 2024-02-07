@@ -1,13 +1,3 @@
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-html {
-  padding: 6px;
-}
-
 a {
   color: black;
   text-decoration-line: none;
@@ -16,8 +6,8 @@ a {
 body {
   font-family: Arial, sans-serif;
   display: grid;
-  grid-template-rows: 1fr 0.5fr 6fr 0.5fr;
-  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-columns: 1fr;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   grid-template-areas:
@@ -56,7 +46,6 @@ header {
 
 nav {
   grid-area: nav;
-  background-color: rgb(255, 255, 255);
 }
 
 .container-nav {
@@ -86,11 +75,17 @@ nav {
 
 main {
   grid-area: main;
-  overflow: hidden;
-  position: relative; /* Added position:relative for absolute positioning */
+  display: grid; /* Add display: grid to main */
+  grid-template-rows: auto auto; /* Define two rows, one for section and one for article */
+  gap: 20px;
 }
 
-.main-container {
+section {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-container {
   position: relative; 
   z-index: 1; 
   color: white; 
@@ -98,26 +93,6 @@ main {
   font-family: 'IBM Plex Serif', serif;
   text-align: left;
 }
-
-.main-container :is(h2, h4) {
-  margin: 0;
-  text-shadow: 0 0 4px rgba(0, 0, 0, 1);
-}
-
-.main-container p {
-  font-size: smaller;
-  text-shadow: 0 0 4px rgba(0, 0, 0, 1);
-  font-weight: 500;
-}
-
-.main-container h2 {
-  margin-bottom: 15px;
-}
-
-.main-container h4 {
-  margin-bottom: 40px;
-}
-
 
 .background-picture {
   width: 100%;
@@ -137,20 +112,60 @@ main {
   }
 }
 
+.section-container :is(h2, h4) {
+  margin: 0;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 1);
+}
+
+.section-container p {
+  font-size: smaller;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 1);
+  font-weight: 500;
+}
+
+.section-container h2 {
+  margin-bottom: 15px;
+}
+
+.section-container h4 {
+  margin-bottom: 40px;
+}
+
+article {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: center; /* Center the items vertically */
+}
+
+
+.product-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+   /* Center the items horizontally */
+}
+
+.product-container p {
+  color: black;
+  font-size: small;
+}
+
+.product-container img {
+  max-width: 100%; /* Ensure the images fit within their containers */
+  
+  border-radius: 10px; /* Apply border-radius to the images */
+}
+
 footer {
   grid-area: footer;
-  background-color: black;
-  border: white solid 2px;
+  color: black;
 }
 
 @media (max-width: 700px) {
   body {
     font-size: 14px; /* Adjust the base font size for smaller screens */
-  }
-
-  .main-container {
-    padding-top: 20px;
-    padding-left: 20px;
   }
 
   .container-nav button {
@@ -168,11 +183,6 @@ footer {
     font-size: 12px; /* Adjust the base font size for smaller screens */
   }
 
-  .main-container {
-    padding-top: 10px;
-    padding-left: 10px;
-  }
-
   .container-nav button {
     font-size: 0.30em;
   }
@@ -186,11 +196,6 @@ footer {
 @media (max-width: 300px) {
   body {
     font-size: 9px; /* Adjust the base font size for smaller screens */
-  }
-
-  .main-container {
-    padding-top: 10px;
-    padding-left: 10px;
   }
 
   .container-nav button {
