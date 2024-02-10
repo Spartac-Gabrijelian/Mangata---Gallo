@@ -1,0 +1,32 @@
+a {
+  color: black;
+  text-decoration-line: none;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-columns: 1fr;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  grid-template-areas:
+    "header header header"
+    "nav nav nav"
+    "main main main"
+    "footer footer footer";
+  opacity: 0.3;
+  animation: fade-in 1.5s ease-in-out forwards;
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+  }
+}
+
+body > * {
+  text-align: center;
+  font-size: 2em;
+  color: white;
+}
