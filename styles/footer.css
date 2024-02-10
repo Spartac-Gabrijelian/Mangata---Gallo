@@ -6,6 +6,7 @@ footer {
   margin:auto 1%;
   align-items: center;
   justify-content: space-between;
+  border-top: solid black 2px;
 }
 
 footer img {
