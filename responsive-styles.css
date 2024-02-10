@@ -35,6 +35,15 @@
   .product-container p {
     font-size: 14px;
   }
+
+  footer img {
+    max-width: 19rem;
+  }
+  
+  footer p {
+    font-size: 17px;
+  }
+
 }
 
 @media (max-width: 750px) {
@@ -66,6 +75,14 @@
   .product-container p {
     font-size: 13px;
   }
+
+  footer img {
+    max-width: 18rem;
+  }
+  
+  footer p {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 620px) {
@@ -91,6 +108,14 @@
 
   .product-container p {
     font-size: 12px;
+  }
+
+  footer img {
+    max-width: 17rem;
+  }
+  
+  footer p {
+    font-size: 15px;
   }
 }
   
@@ -119,6 +144,14 @@
   .product-container p {
     font-size: 11px;
   }
+
+  footer img {
+    max-width: 15rem;
+  }
+  
+  footer p {
+    font-size: 13px;
+  }
 }
 
 @media (max-width: 390px) {
@@ -140,5 +173,13 @@
 
   .product-container p {
     font-size: 5px;
+  }
+
+  footer img {
+    max-width: 14rem;
+  }
+  
+  footer p {
+    font-size: 12px;
   }
 }

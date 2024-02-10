@@ -1,4 +1,22 @@
 footer {
   grid-area: footer;
   color: black;
+  display: flex;
+  flex-direction: row;
+  margin:auto 1%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer img {
+  height: 100%;
+  max-width: 20rem;
+  object-fit: contain;
+}
+
+footer p {
+  color: black;
+  font-family: 'IBM Plex Serif', serif;
+  font-size: 18px;
+  font-weight: 500;
 }
